@@ -1,0 +1,12 @@
+Package: god
+Type: Package
+Title: Little things that make life easier/happier
+Version: 0.1.0
+Date: 2014-11-30
+Author: Diogo Terror
+Maintainer: Diogo Terror <me@diogoterror.com>
+Description: god... is in the details, this is supposed to be a collection of small-ish things that make a difference
+License: The MIT License (MIT)
+URL: https://github.com/dterror/god
+BugReports: https://github.com/dterror/god/issues
+Suggests: testthat

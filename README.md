@@ -5,7 +5,7 @@ or, a collection of small things that will make me happier.
 
 ---
 
-## includes
+## Including:
 
 
 ### string interpolation

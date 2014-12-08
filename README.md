@@ -1,7 +1,6 @@
-# god
-#### ... is in the details
+# minutiaer
 
-or, a collection of small things that will make me happier.
+...or, a collection of small things that will make me happier.
 
 ---
 

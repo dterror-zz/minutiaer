@@ -1,4 +1,4 @@
 library(testthat)
-library(god)
+library(minutiaer)
 
-test_check("god")
+test_check("minutiaer")

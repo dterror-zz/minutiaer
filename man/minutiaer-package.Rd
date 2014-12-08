@@ -1,17 +1,17 @@
-\name{god-package}
-\alias{god-package}
-\alias{god}
+\name{minutiaer-package}
+\alias{minutiaer-package}
+\alias{minutiaer}
 \docType{package}
 \title{
-god: Little things that make life easier/happier
+minutiaer: Little things that make life easier/happier
 }
 \description{
-god... is in the details.
+minutiaer... is in the details.
 This is supposed to be a collection of small-ish things that make a difference
 }
 \details{
 \tabular{ll}{
-Package: \tab god\cr
+Package: \tab minutiaer\cr
 Type: \tab Package\cr
 Version: \tab 0.1.0\cr
 Date: \tab 2014-11-30\cr

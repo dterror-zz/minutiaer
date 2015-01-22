@@ -7,6 +7,7 @@ Author: Diogo Terror
 Maintainer: Diogo Terror <me@diogoterror.com>
 Description: minutiaer... is in the details, this is supposed to be a collection of small-ish things that make a difference
 License: The MIT License (MIT)
+Imports: RJDBC, RPostgreSQL
 URL: https://github.com/dterror/minutiaer
 BugReports: https://github.com/dterror/minutiaer/issues
 Suggests: testthat

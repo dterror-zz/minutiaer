@@ -12,6 +12,8 @@
 No more paste0 nonse. This is a simple string interpolation à la shell, ruby, Scala...
 
 ```r
+library(devtools)
+install_github("dterror/minutiaer")
 core_table <- "table_name"
 dbRunQuery(s("select * from ${core_table} limit 10"))
 ```

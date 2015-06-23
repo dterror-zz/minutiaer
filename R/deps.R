@@ -15,17 +15,20 @@ packages <- scan('dependencies.txt', what="character")
 # for each package in the list, do one of the following: install_github, install.packages, or install_version
 for (package in packages){
   cat(paste('Checking package', package, '[', match(package, packages), 'of', length(packages), '] \n \n ============================ \n \n' ))
-  # check if package exists
-  if(is_package_installed(package)){
-    next  
-  } else if (length(grep('github', package))>0){
+  
+  if (length(grep('github', package))>0){
     full_url <- unlist(strsplit(package, '/'))    
     package_url <- paste(full_url[2], full_url[3], sep='/')
-    devtools::install_github(package_url)    
+    if (is_package_installed(full_url[3])) next 
+    devtools::install_github(package_url) 
+    
   } else if (length(grep(',', package))>0){
     name_and_version <- unlist(strsplit(package, split=','))
-    devtools::install_version(name_and_version[1], name_and_version[2])      
+    if (is_package_installed(name_and_version[1])) next
+    devtools::install_version(name_and_version[1], name_and_version[2])          
+    
   } else{
-    install.packages(package)
-  }  
+    if (is_package_installed(package)) next
+    install.packages(package)    
+  }
 }

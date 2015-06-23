@@ -1,5 +1,11 @@
-is_package_installed <- function(package) package %in% rownames(installed.packages())
-
+is_package_installed <- function(package, version=NULL){  
+  if (is.null(version)){
+    package %in% rownames(installed.packages())  
+  }else{
+    any(version == installed.packages()[,'Version'] & 
+      package == installed.packages()[,'Package'])
+  }
+} 
 cat(paste("Installing new packages in the libpath: \n", .libPaths()), '\n')
 
 # install devtools
@@ -24,8 +30,11 @@ for (package in packages){
     
   } else if (length(grep(',', package))>0){
     name_and_version <- unlist(strsplit(package, split=','))
-    if (is_package_installed(name_and_version[1])) next
-    devtools::install_version(name_and_version[1], name_and_version[2])          
+    package_name <- name_and_version[1]
+    package_version <- name_and_version[2]
+    
+    if (is_package_installed(package_name, package_version)) next
+    devtools::install_version(package_name, package_version)          
     
   } else{
     if (is_package_installed(package)) next
